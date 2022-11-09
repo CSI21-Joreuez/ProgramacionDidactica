@@ -1,0 +1,7 @@
+<div class="container">
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let tema of temas">
+       <button class="btn btn-primary" routerLink="/detalle/{{tema.tema}}">{{tema.tema}} - {{tema.titulo}}</button> 
+    </li>
+</ul>
+</div>

@@ -1,0 +1,15 @@
+<div class="card" *ngIf="temaActual">
+    <div class="card-header"> 
+        {{temaActual.titulo}}
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">{{temaActual.tema}} - {{temaActual.titulo}}</h5>
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let objetivo of temaActual.objetivos">{{objetivo}}</li>
+        </ul>
+        <div class="card-body">
+            <button (click)="goBack()" class="btn btn-primary">Volver</button>
+            <button routerLink="/editar-tema/{{temaActual.tema}}" class="btn btn-success ms-1">Editar tema</button>
+        </div>
+    </div>
+</div>
